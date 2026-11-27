@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <title>LMB 3D guide</title>
+    <script type="module" crossorigin src="./viewer.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index.css">
+  </head>
+  <body>
+    <canvas id="view"></canvas>
+    <svg id="leaders"></svg>
+    <div id="callouts"></div>
+    <div id="cover" hidden></div>
+    <img id="picture" alt="" hidden />
+    <header id="top">
+      <div id="tile"><span id="number"></span></div>
+      <div id="boxes"></div>
+    </header>
+    <div id="side"><span id="sub"></span><div id="symbols"></div></div>
+    <div id="page" hidden></div>
+    <footer id="bottom">
+      <div id="closeups"></div>
+      <div id="nav">
+        <button id="prev" aria-label="Previous step">‹</button>
+        <input id="slider" type="range" min="1" value="1" aria-label="Step" />
+        <span id="count"></span>
+        <button id="next" aria-label="Next step">›</button>
+      </div>
+      <button id="reset" aria-label="Reset the view">Reset view</button>
+      <button id="full" aria-label="Full screen" title="Full screen" hidden></button>
+    </footer>
+    <div id="loading">Loading the guide…</div>
+  </body>
+</html>

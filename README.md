@@ -34,7 +34,7 @@ Add `?step=12` to open a guide at a step.
 
 ## Pushed on its own
 
-`auto-push.ps1` watches this folder. When a guide is added or changed, it waits until the export has finished (nothing changing for a minute), then commits and pushes it to GitHub. Windows starts it, hidden, each time you log in (the scheduled task **LMB guides auto-push**). What it did is in `%LOCALAPPDATA%\LMB\guides-auto-push.log`. If a push fails (no internet), it tries again every 20 seconds.
+`auto-push.ps1` watches this folder. When a guide is added or changed, it waits until the export has finished (nothing changing for a minute), then commits and pushes it to GitHub. Windows starts it, hidden, each time you log in (the scheduled task **LMB guides auto-push**), and checks every 5 minutes that it's still running, starting it again if it has stopped (only one ever runs). What it did is in `%LOCALAPPDATA%\LMB\guides-auto-push.log`. If a push fails (no internet), it tries again every 20 seconds.
 
 ## Notes
 
